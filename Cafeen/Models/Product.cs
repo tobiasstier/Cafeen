@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Cafeen.Models
 {
-    [Table("Product")]
+    [Table("tblProduct")]
     public class Product
     {
         public int Id { get; set; }
