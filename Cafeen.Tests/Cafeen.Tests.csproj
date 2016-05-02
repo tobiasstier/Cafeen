@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE218BCD-5988-4F39-B4F6-0437DE4008CC}</ProjectGuid>
+    <ProjectGuid>{9AA9E911-27B5-4EBE-A355-F11578DEFEC1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Cafeen.Tests</RootNamespace>
     <AssemblyName>Cafeen.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <IsCodedUITest>False</IsCodedUITest>
@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cafeen\Cafeen.csproj">
-      <Project>{B8D092B5-36E5-4D85-B42E-B070A1D907D7}</Project>
+      <Project>{E0847B37-7487-4B90-A882-2F14C37E89EA}</Project>
       <Name>Cafeen</Name>
     </ProjectReference>
   </ItemGroup>
