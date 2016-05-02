@@ -141,7 +141,7 @@
     <Content Include="Web.config" />
     <Content Include="Views\Home\Inventory.cshtml" />
     <Content Include="Views\Home\History.cshtml" />
-    <Content Include="Views\Home\AccountManagement.cshtml" />
+    <Content Include="Views\Home\Accountings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -150,6 +150,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Accounting.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\History.cs" />
     <Compile Include="Models\Product.cs" />

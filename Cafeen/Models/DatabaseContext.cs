@@ -11,5 +11,6 @@ namespace Cafeen.Models
     {
         public DbSet<History> Histories { get; set; }
         public DbSet<Product> Products { get; set; } 
+        public DbSet<Accounting> Accountings { get; set; }
     }
 }
