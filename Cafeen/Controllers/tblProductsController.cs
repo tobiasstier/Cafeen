@@ -85,10 +85,11 @@ namespace Cafeen.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,InventoryId,CategoryId")] tblProduct tblProduct)
+        public ActionResult Edit([Bind(Include = "Id,InventoryId,CategoryId")] tblProduct tblProduct, [Bind(Include = "Id, CategoryName, Price")] tblCategory tblCategory)
         {
             if (ModelState.IsValid)
             {
+                db.Entry(tblCategory).State = EntityState.Modified;
                 db.Entry(tblProduct).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
