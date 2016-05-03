@@ -15,7 +15,10 @@
             @Html.DisplayNameFor(model => model.tblInventory.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblCategory.CategoryName)
+            <b>Category</b>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblInventory.Qty)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.tblCategory.Price)
@@ -31,6 +34,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.tblCategory.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tblInventory.Qty)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.tblCategory.Price)
