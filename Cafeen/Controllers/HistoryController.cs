@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Cafeen.Models;
 
 namespace Cafeen.Controllers
 {
@@ -11,7 +12,15 @@ namespace Cafeen.Controllers
         // GET: History
         public ActionResult Index()
         {
-            return View();
+
+            DatabaseContext db = new DatabaseContext();
+
+
+            List<History> history = db.Histories.ToList();
+
+
+
+            return View(history);
         }
     }
 }

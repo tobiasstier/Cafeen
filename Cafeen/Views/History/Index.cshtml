@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Cafeen.Models.History>
+
+@using Cafeen.Models;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Product name:
+        </th>
+        <th>
+            Quantity:
+        </th>
+        <th>
+            Category name:
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Date of change:
+        </th>
+        <th>
+            Change message:
+        </th>
+    </tr>
+    @foreach (var history in @Model)
+    {
+        <tr>
+            <td>@history.ProductName</td>
+            <td>@history.Qty</td>
+            <td>@history.CatName</td>
+            <td>@history.CatPrice</td>
+            <td>@history.Timestamp</td>
+            <td class="changeMessage">@history.Message</td>
+        </tr>
+    }
+    
+</table>
