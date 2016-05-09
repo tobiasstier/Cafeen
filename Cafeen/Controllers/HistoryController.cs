@@ -8,7 +8,7 @@ namespace Cafeen.Controllers
 {
     public class HistoryController : Controller
     {
-        // GET: History
+        // GET: Historys
         public ActionResult Index()
         {
             return View();
