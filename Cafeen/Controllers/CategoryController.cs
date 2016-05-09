@@ -3,19 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Cafeen.Models;
 
 namespace Cafeen.Controllers
 {
-    public class HistoryController : Controller
+    public class CategoryController : Controller
     {
-        // GET: History
+        // GET: Category
         public ActionResult Index()
         {
-            DatabaseContext db = new DatabaseContext();
-
-
-
             return View();
         }
     }

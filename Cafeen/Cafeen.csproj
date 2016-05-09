@@ -136,6 +136,7 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -147,8 +148,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountingController.cs" />
+    <Compile Include="Controllers\AccountingsController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\tblCategoriesController.cs" />
     <Compile Include="Controllers\tblProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -178,6 +183,16 @@
     <Content Include="Views\tblProducts\Details.cshtml" />
     <Content Include="Views\tblProducts\Edit.cshtml" />
     <Content Include="Views\tblProducts\Index.cshtml" />
+    <Content Include="Views\tblCategories\Create.cshtml" />
+    <Content Include="Views\tblCategories\Delete.cshtml" />
+    <Content Include="Views\tblCategories\Details.cshtml" />
+    <Content Include="Views\tblCategories\Edit.cshtml" />
+    <Content Include="Views\tblCategories\Index.cshtml" />
+    <Content Include="Views\Accountings\Create.cshtml" />
+    <Content Include="Views\Accountings\Delete.cshtml" />
+    <Content Include="Views\Accountings\Details.cshtml" />
+    <Content Include="Views\Accountings\Edit.cshtml" />
+    <Content Include="Views\Accountings\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -187,6 +202,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Accounting\" />
+    <Folder Include="Views\Category\" />
     <Folder Include="Views\History\" />
     <Folder Include="Views\Management\" />
   </ItemGroup>
