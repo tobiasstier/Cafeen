@@ -10,117 +10,107 @@ using Cafeen.Models;
 
 namespace Cafeen.Controllers
 {
-    public class tblProductsController : Controller
+    public class tblCategoriesController : Controller
     {
         private ProductContext db = new ProductContext();
 
-        // GET: tblProducts
+        // GET: tblCategories
         public ActionResult Index()
         {
-            var tblProducts = db.tblProducts.Include(t => t.tblCategory).Include(t => t.tblInventory);
-            return View(tblProducts.ToList());
+            return View(db.tblCategories.ToList());
         }
 
-        // GET: tblProducts/Details/5
+        // GET: tblCategories/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tblProduct tblProduct = db.tblProducts.Find(id);
-            if (tblProduct == null)
+            tblCategory tblCategory = db.tblCategories.Find(id);
+            if (tblCategory == null)
             {
                 return HttpNotFound();
             }
-            return View(tblProduct);
+            return View(tblCategory);
         }
 
-        // GET: tblProducts/Create
+        // GET: tblCategories/Create
         public ActionResult Create()
         {
-            ViewBag.CategoryId = new SelectList(db.tblCategories, "Id", "CategoryName");
-
             return View();
         }
 
-        // POST: tblProducts/Create
+        // POST: tblCategories/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,InventoryId,CategoryId")] tblProduct tblProduct)
+        public ActionResult Create([Bind(Include = "Id,CategoryName,Price")] tblCategory tblCategory)
         {
             if (ModelState.IsValid)
             {
-                db.tblProducts.Add(tblProduct);
+                db.tblCategories.Add(tblCategory);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            
-            ViewBag.CategoryId = new SelectList(db.tblCategories, "Id", "CategoryName", tblProduct.CategoryId);
-            ViewBag.InventoryId = new SelectList(db.tblInventories, "Id", "Name", tblProduct.InventoryId);
-            return View(tblProduct);
+
+            return View(tblCategory);
         }
 
-        // GET: tblProducts/Edit/5
+        // GET: tblCategories/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tblProduct tblProduct = db.tblProducts.Find(id);
-            if (tblProduct == null)
+            tblCategory tblCategory = db.tblCategories.Find(id);
+            if (tblCategory == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CategoryId = new SelectList(db.tblCategories, "Id", "CategoryName", tblProduct.CategoryId);
-            ViewBag.InventoryId = new SelectList(db.tblInventories, "Id", "Name", tblProduct.InventoryId);
-            return View(tblProduct);
+            return View(tblCategory);
         }
 
-        // POST: tblProducts/Edit/5
+        // POST: tblCategories/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,InventoryId,CategoryId")] tblProduct tblProduct, [Bind(Include = "Id, CategoryName, Price")] tblCategory tblCategory)
+        public ActionResult Edit([Bind(Include = "Id,CategoryName,Price")] tblCategory tblCategory)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(tblCategory).State = EntityState.Modified;
-                db.Entry(tblProduct).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CategoryId = new SelectList(db.tblCategories, "Id", "CategoryName", tblProduct.CategoryId);
-            ViewBag.InventoryId = new SelectList(db.tblInventories, "Id", "Name", tblProduct.InventoryId);
-            return View(tblProduct);
+            return View(tblCategory);
         }
 
-        // GET: tblProducts/Delete/5
+        // GET: tblCategories/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tblProduct tblProduct = db.tblProducts.Find(id);
-            if (tblProduct == null)
+            tblCategory tblCategory = db.tblCategories.Find(id);
+            if (tblCategory == null)
             {
                 return HttpNotFound();
             }
-            return View(tblProduct);
+            return View(tblCategory);
         }
 
-        // POST: tblProducts/Delete/5
+        // POST: tblCategories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            tblProduct tblProduct = db.tblProducts.Find(id);
-            db.tblProducts.Remove(tblProduct);
+            tblCategory tblCategory = db.tblCategories.Find(id);
+            db.tblCategories.Remove(tblCategory);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
