@@ -1,0 +1,50 @@
+﻿@model Cafeen.Models.Accounting
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Accounting</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StartCash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartCash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndCash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndCash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardCash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardCash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Timestamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Timestamp)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
