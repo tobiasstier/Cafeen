@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Cafeen.Models;
+using Cafeen.ViewModels;
 
 namespace Cafeen.Controllers
 {
@@ -15,10 +16,9 @@ namespace Cafeen.Controllers
         private ProductContext db = new ProductContext();
 
         // GET: tblProducts
-        public ActionResult Index()
+        public ActionResult Index(int Id)
         {
-            var tblProducts = db.tblProducts.Include(t => t.tblCategory).Include(t => t.tblInventory);
-            return View(tblProducts.ToList());
+            var viewModel = new tblProductsIndexData();
         }
 
         // GET: tblProducts/Details/5
