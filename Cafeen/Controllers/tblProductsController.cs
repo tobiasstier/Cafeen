@@ -16,9 +16,10 @@ namespace Cafeen.Controllers
         private ProductContext db = new ProductContext();
 
         // GET: tblProducts
-        public ActionResult Index(int Id)
+        public ActionResult Index()
         {
-            var viewModel = new tblProductsIndexData();
+            var tblProducts = db.tblProducts.Include(t => t.tblCategory).Include(t => t.tblInventory);
+            return View(tblProducts.ToList());
         }
 
         // GET: tblProducts/Details/5
