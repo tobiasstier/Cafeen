@@ -15,9 +15,43 @@ namespace Cafeen.Controllers
         private ProductContext db = new ProductContext();
 
         // GET: tblProducts
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            var tblProducts = db.tblProducts.Include(t => t.tblCategory);
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.PriceSortParm = sortOrder == "Price" ? "price_desc" : "Price";
+            ViewBag.QtySortParm = sortOrder == "Qty" ? "qty_desc" : "Qty";
+            ViewBag.CategorySortParm = sortOrder == "Category" ? "category_desc" : "Category";
+
+            var tblProducts = from s in db.tblProducts.Include(t => t.tblCategory)
+                              select s;
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    tblProducts = tblProducts.OrderByDescending(s => s.Name);
+                    break;
+                case "Category":
+                    tblProducts = tblProducts.OrderBy(s => s.tblCategory.CategoryName);
+                    break;
+                case "category_desc":
+                    tblProducts = tblProducts.OrderByDescending(s => s.tblCategory.CategoryName);
+                    break;
+                case "Price":
+                    tblProducts = tblProducts.OrderBy(s => s.tblCategory.Price);
+                    break;
+                case "price_desc":
+                    tblProducts = tblProducts.OrderByDescending(s => s.tblCategory.Price);
+                    break;
+                case "Qty":
+                    tblProducts = tblProducts.OrderBy(s => s.Qty);
+                    break;
+                case "qty_desc":
+                    tblProducts = tblProducts.OrderByDescending(s => s.Qty);
+                    break;
+                default:
+                    tblProducts = tblProducts.OrderBy(s => s.Name);
+                    break;
+            }
+
             return View(tblProducts.ToList());
         }
 
