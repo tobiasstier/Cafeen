@@ -7,7 +7,6 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Cafeen.Models;
-using Cafeen.ViewModels;
 
 namespace Cafeen.Controllers
 {
@@ -18,7 +17,7 @@ namespace Cafeen.Controllers
         // GET: tblProducts
         public ActionResult Index()
         {
-            var tblProducts = db.tblProducts.Include(t => t.tblCategory).Include(t => t.tblInventory);
+            var tblProducts = db.tblProducts.Include(t => t.tblCategory);
             return View(tblProducts.ToList());
         }
 
@@ -41,7 +40,6 @@ namespace Cafeen.Controllers
         public ActionResult Create()
         {
             ViewBag.CategoryId = new SelectList(db.tblCategories, "Id", "CategoryName");
-
             return View();
         }
 
@@ -50,7 +48,7 @@ namespace Cafeen.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,InventoryId,CategoryId")] tblProduct tblProduct)
+        public ActionResult Create([Bind(Include = "Id,Name,Qty,CategoryId")] tblProduct tblProduct)
         {
             if (ModelState.IsValid)
             {
@@ -58,9 +56,8 @@ namespace Cafeen.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            
+
             ViewBag.CategoryId = new SelectList(db.tblCategories, "Id", "CategoryName", tblProduct.CategoryId);
-            ViewBag.InventoryId = new SelectList(db.tblInventories, "Id", "Name", tblProduct.InventoryId);
             return View(tblProduct);
         }
 
@@ -77,7 +74,6 @@ namespace Cafeen.Controllers
                 return HttpNotFound();
             }
             ViewBag.CategoryId = new SelectList(db.tblCategories, "Id", "CategoryName", tblProduct.CategoryId);
-            ViewBag.InventoryId = new SelectList(db.tblInventories, "Id", "Name", tblProduct.InventoryId);
             return View(tblProduct);
         }
 
@@ -86,17 +82,15 @@ namespace Cafeen.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,InventoryId,CategoryId")] tblProduct tblProduct, [Bind(Include = "Id, CategoryName, Price")] tblCategory tblCategory)
+        public ActionResult Edit([Bind(Include = "Id,Name,Qty,CategoryId")] tblProduct tblProduct)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(tblCategory).State = EntityState.Modified;
                 db.Entry(tblProduct).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             ViewBag.CategoryId = new SelectList(db.tblCategories, "Id", "CategoryName", tblProduct.CategoryId);
-            ViewBag.InventoryId = new SelectList(db.tblInventories, "Id", "Name", tblProduct.InventoryId);
             return View(tblProduct);
         }
 

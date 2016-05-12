@@ -10,9 +10,15 @@ namespace Cafeen.Models
     public partial class tblProduct
     {
         public int Id { get; set; }
-        public int? InventoryId { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Name { get; set; }
+
+        public int Qty { get; set; }
+
         public int? CategoryId { get; set; }
+
         public virtual tblCategory tblCategory { get; set; }
-        public virtual tblInventory tblInventory { get; set; }
     }
 }
