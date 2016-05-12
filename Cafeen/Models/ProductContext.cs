@@ -8,12 +8,11 @@ namespace Cafeen.Models
     public partial class ProductContext : DbContext
     {
         public ProductContext()
-            : base("name=ProductContext")
+            : base("name=ProductContext1")
         {
         }
 
         public virtual DbSet<tblCategory> tblCategories { get; set; }
-        public virtual DbSet<tblInventory> tblInventories { get; set; }
         public virtual DbSet<tblProduct> tblProducts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -26,11 +25,6 @@ namespace Cafeen.Models
                 .HasMany(e => e.tblProducts)
                 .WithOptional(e => e.tblCategory)
                 .HasForeignKey(e => e.CategoryId);
-
-            modelBuilder.Entity<tblInventory>()
-                .HasMany(e => e.tblProducts)
-                .WithOptional(e => e.tblInventory)
-                .HasForeignKey(e => e.InventoryId);
         }
     }
 }

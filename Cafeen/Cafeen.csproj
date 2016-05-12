@@ -140,6 +140,11 @@
     <None Include="scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Home\Inventory.cshtml" />
@@ -163,7 +168,6 @@
     <Compile Include="Models\History.cs" />
     <Compile Include="Models\ProductContext.cs" />
     <Compile Include="Models\tblCategory.cs" />
-    <Compile Include="Models\tblInventory.cs" />
     <Compile Include="Models\tblProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\tblProductsIndexData.cs" />
@@ -179,11 +183,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\tblProducts\Create.cshtml" />
-    <Content Include="Views\tblProducts\Delete.cshtml" />
-    <Content Include="Views\tblProducts\Details.cshtml" />
-    <Content Include="Views\tblProducts\Edit.cshtml" />
-    <Content Include="Views\tblProducts\Index.cshtml" />
     <Content Include="Views\tblCategories\Create.cshtml" />
     <Content Include="Views\tblCategories\Delete.cshtml" />
     <Content Include="Views\tblCategories\Details.cshtml" />
@@ -194,6 +193,11 @@
     <Content Include="Views\Accountings\Details.cshtml" />
     <Content Include="Views\Accountings\Edit.cshtml" />
     <Content Include="Views\Accountings\Index.cshtml" />
+    <Content Include="Views\tblProducts\Create.cshtml" />
+    <Content Include="Views\tblProducts\Delete.cshtml" />
+    <Content Include="Views\tblProducts\Details.cshtml" />
+    <Content Include="Views\tblProducts\Edit.cshtml" />
+    <Content Include="Views\tblProducts\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
