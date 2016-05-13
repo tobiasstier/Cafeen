@@ -13,6 +13,7 @@ namespace Cafeen
         protected void Application_Start()
         {
             Database.SetInitializer<Models.DatabaseContext>(null);
+            Database.SetInitializer<Models.ProductContext>(null);
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }

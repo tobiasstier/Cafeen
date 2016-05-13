@@ -15,7 +15,7 @@ namespace Cafeen.Controllers
         private ProductContext db = new ProductContext();
 
         // GET: tblProducts
-        public ActionResult Index(string sortOrder)
+        public ActionResult Index(string sortOrder, string searchString)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.PriceSortParm = sortOrder == "Price" ? "price_desc" : "Price";
@@ -24,6 +24,11 @@ namespace Cafeen.Controllers
 
             var tblProducts = from s in db.tblProducts.Include(t => t.tblCategory)
                               select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                tblProducts = tblProducts.Where(s => s.Name.Contains(searchString)
+                || s.tblCategory.CategoryName.Contains(searchString));
+            }
             switch (sortOrder)
             {
                 case "name_desc":
