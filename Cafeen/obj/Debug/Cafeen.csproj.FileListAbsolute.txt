@@ -194,3 +194,7 @@ C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Mvc.xml
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.csprojResolveAssemblyReference.cache
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.dll
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.pdb
+C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.dll
+C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.Mvc.dll
+C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.xml
+C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.Mvc.xml
