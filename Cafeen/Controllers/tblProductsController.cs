@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Cafeen.Models;
+using PagedList;
 
 namespace Cafeen.Controllers
 {
@@ -15,12 +16,24 @@ namespace Cafeen.Controllers
         private ProductContext db = new ProductContext();
 
         // GET: tblProducts
-        public ActionResult Index(string sortOrder, string searchString)
+        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
+            ViewBag.CurrentSort = sortOrder;
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.PriceSortParm = sortOrder == "Price" ? "price_desc" : "Price";
             ViewBag.QtySortParm = sortOrder == "Qty" ? "qty_desc" : "Qty";
             ViewBag.CategorySortParm = sortOrder == "Category" ? "category_desc" : "Category";
+
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = searchString;
 
             var tblProducts = from s in db.tblProducts.Include(t => t.tblCategory)
                               select s;
@@ -57,7 +70,9 @@ namespace Cafeen.Controllers
                     break;
             }
 
-            return View(tblProducts.ToList());
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+            return View(tblProducts.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: tblProducts/Details/5
