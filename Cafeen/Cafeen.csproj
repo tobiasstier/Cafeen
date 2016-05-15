@@ -161,9 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AccountingController.cs" />
     <Compile Include="Controllers\AccountingsController.cs" />
-    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\tblCategoriesController.cs" />
@@ -215,8 +213,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Accounting\" />
-    <Folder Include="Views\Category\" />
     <Folder Include="Views\History\" />
     <Folder Include="Views\Management\" />
   </ItemGroup>
