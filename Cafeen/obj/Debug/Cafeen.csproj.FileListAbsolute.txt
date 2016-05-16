@@ -202,3 +202,7 @@ C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.dll
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.Mvc.dll
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.xml
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.Mvc.xml
+C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.dll
+C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.Mvc.dll
+C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.xml
+C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.Mvc.xml
