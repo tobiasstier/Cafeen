@@ -4,11 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Accounting</h2>
 
-<p>
-    @Html.ActionLink("Start a new day", "Create")
-</p>
+<p> @Html.ActionLink("Start a new day", "Create") </p>
+
+
 <table class="table">
     <tr>
         <th>
@@ -25,30 +25,50 @@
         </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.ActionLink("Receipt", "Receipt", new { id = item.Id })
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Timestamp)
-        </td>
-        <td>
-            @if (item.LockStatus == true)
-            {
-                <p class="LockText">Locked</p>
-            }
-            else
-            {
-                @Html.ActionLink("Lock the day", "Lock")
-            }
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @if (item.LockStatus == false)
+                {
+                    <p style="color:gray">Receipt</p>
+                }
+                else
+                {
+                    @Html.ActionLink("Receipt", "Receipt", new { id = item.Id })
+                }
+            </td>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.Timestamp)
+            </td>
+            <td>
+                @if (item.LockStatus == true)
+                {
+                    <p class="LockText">Locked</p>
+                }
+                else
+                {
+                    @Html.ActionLink("Open", "Lock", new { id = item.Id })
+                }
+            </td>
+            <td>
+                @if (item.LockStatus == true)
+                {
+                     @Html.ActionLink("Details", "Details", new { id = item.Id }) <p style="display:inline"> | </p>
+
+                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                }
+                else
+                {
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) <p style="display:inline"> | </p>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })  <p style="display:inline"> | </p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                }
+
+
+            </td>
+        </tr>
+    }
 
 </table>

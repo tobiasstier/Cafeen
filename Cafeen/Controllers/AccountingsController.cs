@@ -133,5 +133,32 @@ namespace Cafeen.Controllers
 
             return View(tblAccountings);
         }
+
+        public ActionResult Lock(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Accounting accounting = db.Accountings.Find(id);
+            if (accounting == null)
+            {
+                return HttpNotFound();
+            }
+            return View(accounting);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Lock([Bind(Include = "LockStatus")] Accounting accounting)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(accounting).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(accounting);
+        }
     }
 }
