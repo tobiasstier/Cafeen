@@ -123,5 +123,10 @@ namespace Cafeen.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Receipt(int id)
+        {
+            return View();
+        }
     }
 }
