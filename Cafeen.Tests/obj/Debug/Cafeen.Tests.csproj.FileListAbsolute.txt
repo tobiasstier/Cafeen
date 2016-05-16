@@ -102,3 +102,8 @@ C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen.Tests\bin\Debug\PagedList.dll
 C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen.Tests\bin\Debug\PagedList.Mvc.dll
 C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen.Tests\bin\Debug\PagedList.xml
 C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen.Tests\bin\Debug\PagedList.Mvc.xml
+C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen.Tests\bin\Debug\Cafeen.Tests.dll.config
+C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen.Tests\bin\Debug\PagedList.dll
+C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen.Tests\bin\Debug\PagedList.Mvc.dll
+C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen.Tests\bin\Debug\PagedList.xml
+C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen.Tests\bin\Debug\PagedList.Mvc.xml
