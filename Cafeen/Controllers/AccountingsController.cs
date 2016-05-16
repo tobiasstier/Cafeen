@@ -126,7 +126,12 @@ namespace Cafeen.Controllers
 
         public ActionResult Receipt(int id)
         {
-            return View();
+
+            var tblAccountings = from s in db.Accountings
+                              .Where (t => t.Id == id)
+                              select s;
+
+            return View(tblAccountings);
         }
     }
 }
