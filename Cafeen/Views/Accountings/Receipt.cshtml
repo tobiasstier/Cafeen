@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Cafeen.Models.Accounting>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Receipt";
 }
 
-<h2>Index</h2>
+<h2>Receipt</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,10 +12,19 @@
 <table class="table">
     <tr>
         <th>
-            <b>Receipt</b>
+            @Html.DisplayNameFor(model => model.StartCash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndCash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardCash)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Timestamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LockStatus)
         </th>
         <th></th>
     </tr>
@@ -23,10 +32,19 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.ActionLink("Receipt", "Receipt")
+            @Html.DisplayFor(modelItem => item.StartCash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndCash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardCash)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Timestamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LockStatus)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

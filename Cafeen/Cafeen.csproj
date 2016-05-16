@@ -204,6 +204,7 @@
     <Content Include="Views\tblProducts\Details.cshtml" />
     <Content Include="Views\tblProducts\Edit.cshtml" />
     <Content Include="Views\tblProducts\Index.cshtml" />
+    <Content Include="Views\Accountings\Receipt.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
