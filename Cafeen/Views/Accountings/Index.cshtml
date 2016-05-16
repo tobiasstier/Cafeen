@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Start a new day", "Create")
 </p>
 <table class="table">
     <tr>
@@ -17,16 +17,31 @@
         <th>
             @Html.DisplayNameFor(model => model.Timestamp)
         </th>
-        <th></th>
+        <th>
+            Lock status
+        </th>
+        <th>
+            Actions
+        </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.ActionLink("Receipt", "Receipt")
+            @Html.ActionLink("Receipt", "Receipt", new { id = item.Id })
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Timestamp)
+        </td>
+        <td>
+            @if (item.LockStatus == true)
+            {
+                <p class="LockText">Locked</p>
+            }
+            else
+            {
+                @Html.ActionLink("Lock the day", "Lock")
+            }
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

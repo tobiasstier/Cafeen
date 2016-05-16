@@ -1,150 +1,3 @@
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\roslyn\csc.exe
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\roslyn\Microsoft.CodeAnalysis.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\roslyn\Microsoft.CSharp.Core.targets
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\roslyn\Microsoft.VisualBasic.Core.targets
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\roslyn\System.Collections.Immutable.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\roslyn\System.Reflection.Metadata.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\roslyn\vbc.exe
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\roslyn\VBCSCompiler.exe
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\roslyn\VBCSCompiler.exe.config
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Cafeen.dll.config
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Cafeen.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Cafeen.pdb
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.AI.Agent.Intercept.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.AI.DependencyCollector.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.AI.PerfCounterCollector.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.AI.ServerTelemetryChannel.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.AI.Web.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.AI.WindowsServer.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.ApplicationInsights.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.Web.Infrastructure.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\System.Web.Helpers.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\System.Web.Mvc.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\System.Web.Razor.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\System.Web.Webpages.Deployment.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\System.Web.Webpages.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\System.Web.Webpages.Razor.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.AI.DependencyCollector.xml
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.AI.ServerTelemetryChannel.xml
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.AI.Web.xml
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.AI.WindowsServer.xml
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.ApplicationInsights.xml
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\System.Web.Razor.xml
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\System.Web.Webpages.xml
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\System.Web.Webpages.Deployment.xml
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\System.Web.Webpages.Razor.xml
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\System.Web.Helpers.xml
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\System.Web.Mvc.xml
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\obj\Debug\Cafeen.csprojResolveAssemblyReference.cache
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\obj\Debug\Cafeen.dll
-c:\users\oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\obj\Debug\Cafeen.pdb
-C:\Users\Oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\EntityFramework.dll
-C:\Users\Oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\EntityFramework.SqlServer.dll
-C:\Users\Oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\EntityFramework.xml
-C:\Users\Oliver\documents\visual studio 2015\Projects\Cafeen\Cafeen\bin\EntityFramework.SqlServer.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\csc.exe
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\vbc.exe
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\VBCSCompiler.exe
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Cafeen.dll.config
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Cafeen.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Cafeen.pdb
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\EntityFramework.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\EntityFramework.SqlServer.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.Web.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.ApplicationInsights.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Helpers.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Mvc.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Razor.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.Deployment.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.Razor.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\EntityFramework.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\EntityFramework.SqlServer.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.Web.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.ApplicationInsights.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Razor.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.Deployment.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.Razor.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Helpers.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Mvc.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.csprojResolveAssemblyReference.cache
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.dll
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.pdb
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\csc.exe
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\vbc.exe
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\VBCSCompiler.exe
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Cafeen.dll.config
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Cafeen.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Cafeen.pdb
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\EntityFramework.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\EntityFramework.SqlServer.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.Web.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.ApplicationInsights.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Helpers.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Mvc.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Razor.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.Deployment.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.Razor.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\EntityFramework.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\EntityFramework.SqlServer.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.Web.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.ApplicationInsights.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Razor.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.Deployment.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.Razor.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Helpers.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Mvc.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.csprojResolveAssemblyReference.cache
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.pdb
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\csc.exe
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -171,6 +24,8 @@ C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.WindowsServer.dl
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.ApplicationInsights.dll
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.dll
+C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.Mvc.dll
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Helpers.dll
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Mvc.dll
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Razor.dll
@@ -185,6 +40,8 @@ C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.Web.xml
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.ApplicationInsights.xml
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.xml
+C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.Mvc.xml
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Razor.xml
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.xml
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.Deployment.xml
@@ -194,11 +51,3 @@ C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Mvc.xml
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.csprojResolveAssemblyReference.cache
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.dll
 C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.pdb
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.Mvc.dll
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.xml
-C:\Users\Skynet\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.Mvc.xml
-C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.dll
-C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.Mvc.dll
-C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.xml
-C:\Users\Oliver\Documents\GitHub\Cafeen\Cafeen\bin\PagedList.Mvc.xml
