@@ -13,6 +13,7 @@ namespace Cafeen.Controllers
     public class AccountingsController : Controller
     {
         private DatabaseContext db = new DatabaseContext();
+        private ProductContext db2 = new ProductContext();
 
         // GET: Accountings
         public ActionResult Index()
@@ -134,6 +135,7 @@ namespace Cafeen.Controllers
             return View(tblAccountings);
         }
 
+<<<<<<< HEAD
         public ActionResult Lock(int? id)
         {
             if (id == null)
@@ -159,6 +161,21 @@ namespace Cafeen.Controllers
                 return RedirectToAction("Index");
             }
             return View(accounting);
+=======
+        //Returns all the products in tblProduct table as a string on the
+        //form: id,name,cat,qty,price;id,name,cat,qty,price; ...
+        public string ProductToStringParser (int id)
+        {
+            var tblProducts = from s in db2.tblProducts.Include(t => t.tblCategory)
+                              select s;
+            string productString = "";
+            foreach (var item in tblProducts)
+            {
+                productString = productString +
+                    string.Join(",", item.Id.ToString(), item.Name, item.tblCategory.CategoryName, item.Qty.ToString(), item.tblCategory.Price.ToString()) + ";"
+            }
+            return productString;
+>>>>>>> refs/remotes/origin/master
         }
     }
 }
