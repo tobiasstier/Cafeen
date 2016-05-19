@@ -148,25 +148,19 @@ namespace Cafeen.Controllers
             {
                 return HttpNotFound();
             }
-            return View(accounting);
+            if (accounting.LockStatus)
+            {
+                accounting.LockStatus = false;
+            }
+            else
+            {
+                accounting.LockStatus = true;
+                accounting.EndProduct = ProductToStringParser();
+            }
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Lock([Bind(Include = "LockStatus")] Accounting accounting)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(accounting).State = EntityState.Modified;
-                if (accounting.LockStatus)
-                {
-                    accounting.EndProduct = ProductToStringParser();
-                }
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(accounting);
-        }
         //Returns all the products in tblProduct table as a string on the
         //form: id,name,cat,qty,price;id,name,cat,qty,price; ...
         public string ProductToStringParser ()
