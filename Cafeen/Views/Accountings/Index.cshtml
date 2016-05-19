@@ -46,10 +46,12 @@
                 @if (item.LockStatus == true)
                 {
                     <p class="LockText">Locked</p>
+                    <input type="button" value="Unlock" onclick="location.href='@Url.Action("Lock", "Accountings", new { id = item.Id })'" />
                 }
                 else
                 {
-                    @Html.ActionLink("Open", "Lock", new { id = item.Id })
+                    <p class="LockText1">Unlocked</p>
+                    <input type="button" value="Lock" onclick="location.href='@Url.Action("Lock", "Accountings", new { id = item.Id })'" />
                 }
             </td>
             <td>
