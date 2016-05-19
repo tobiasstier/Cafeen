@@ -52,6 +52,7 @@ namespace Cafeen.Controllers
             if (ModelState.IsValid)
             {
                 db.Accountings.Add(accounting);
+                accounting.StartProduct = ProductToStringParser();
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -121,6 +122,7 @@ namespace Cafeen.Controllers
             if (disposing)
             {
                 db.Dispose();
+                db2.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -141,7 +143,7 @@ namespace Cafeen.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Accounting accounting = db.Accountings.Find(id);
+            var accounting = db.Accountings.Find(id);
             if (accounting == null)
             {
                 return HttpNotFound();
@@ -156,6 +158,10 @@ namespace Cafeen.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(accounting).State = EntityState.Modified;
+                if (accounting.LockStatus)
+                {
+                    accounting.EndProduct = ProductToStringParser();
+                }
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -163,7 +169,7 @@ namespace Cafeen.Controllers
         }
         //Returns all the products in tblProduct table as a string on the
         //form: id,name,cat,qty,price;id,name,cat,qty,price; ...
-        public string ProductToStringParser (int id)
+        public string ProductToStringParser ()
         {
             var tblProducts = from s in db2.tblProducts.Include(t => t.tblCategory)
                               select s;

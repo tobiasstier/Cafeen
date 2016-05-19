@@ -15,5 +15,7 @@ namespace Cafeen.Models
         public decimal CardCash { get; set; }
         public DateTime Timestamp { get; set; }
         public Boolean LockStatus { get; set; }
+        public string StartProduct { get; set; }
+        public string EndProduct { get; set; }
     }
 }
