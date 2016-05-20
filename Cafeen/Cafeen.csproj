@@ -176,6 +176,8 @@
     <Compile Include="Models\tblCategory.cs" />
     <Compile Include="Models\tblProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AccountingsReceipt.cs" />
+    <Compile Include="ViewModels\Product.cs" />
     <Compile Include="ViewModels\tblProductsIndexData.cs" />
   </ItemGroup>
   <ItemGroup>
