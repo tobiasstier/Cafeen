@@ -6,9 +6,6 @@
 
 <h2>Receipt</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -21,7 +18,7 @@
             @Html.DisplayNameFor(model => model.CardCash)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Timestamp)
+            <b>Lock Timestamp</b>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.LockStatus)
@@ -46,4 +43,52 @@
         </td>
     </tr>
 
+</table>
+
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            Start Qty
+        </th>
+        <th>
+            End Qty
+        </th>
+        <th>
+            Price
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model.StartProduct)
+    {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => (item.Qty))
+            </td>
+            <td>
+                @Model.EndProduct.Where(s=> s.Id == item.Id).First().Qty
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+        </tr>
+    }
 </table>
