@@ -13,24 +13,5 @@ namespace Cafeen.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
-        {
-            return View();
-        }
-
-        public ActionResult History()
-        {
-
-            DatabaseContext db = new DatabaseContext();
-            List<History> history = db.Histories.ToList();
-
-            return View(history);
-        }
-
-        public ActionResult Contact()
-        {
-            return View();
-        }
     }
 }
