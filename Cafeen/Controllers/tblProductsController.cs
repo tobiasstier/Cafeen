@@ -16,7 +16,7 @@ namespace Cafeen.Controllers
         private ProductContext db = new ProductContext();
 
         // GET: tblProducts
-        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
+        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page, int itemPrPage = 5)
         {
             ViewBag.CurrentSort = sortOrder;
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
@@ -34,6 +34,8 @@ namespace Cafeen.Controllers
             }
 
             ViewBag.CurrentFilter = searchString;
+            ViewBag.CurrentPage = itemPrPage;
+
 
             var tblProducts = from s in db.tblProducts.Include(t => t.tblCategory)
                               select s;
@@ -70,7 +72,7 @@ namespace Cafeen.Controllers
                     break;
             }
 
-            int pageSize = 5;
+            int pageSize = itemPrPage;
             int pageNumber = (page ?? 1);
             return View(tblProducts.ToPagedList(pageNumber, pageSize));
         }
