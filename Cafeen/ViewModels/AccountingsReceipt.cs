@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace Cafeen.Models
+namespace Cafeen.ViewModels
 {
-    [Table("tblAccounting")]
-    public class Accounting
+    public class AccountingsReceipt
     {
         public int Id { get; set; }
         public decimal StartCash { get; set; }
@@ -15,7 +13,7 @@ namespace Cafeen.Models
         public decimal CardCash { get; set; }
         public DateTime Timestamp { get; set; }
         public Boolean LockStatus { get; set; }
-        public string StartProduct { get; set; }
-        public string EndProduct { get; set; }
+        public List<Product> StartProduct { get; set; }
+        public List<Product> EndProduct { get; set; }
     }
 }

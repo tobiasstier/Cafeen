@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Cafeen.Models;
+using Cafeen.ViewModels;
+using System.Globalization;
 
 namespace Cafeen.Controllers
 {
@@ -52,6 +54,8 @@ namespace Cafeen.Controllers
             if (ModelState.IsValid)
             {
                 db.Accountings.Add(accounting);
+                accounting.Timestamp = DateTime.Now;
+                accounting.StartProduct = ProductToStringParser();
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -116,49 +120,62 @@ namespace Cafeen.Controllers
             return RedirectToAction("Index");
         }
 
+        //Closes databases after they've been used.
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
                 db.Dispose();
+                db2.Dispose();
             }
             base.Dispose(disposing);
         }
-
+        
+        //Used by the Receipt View to display the data from Accountings table.
         public ActionResult Receipt(int id)
         {
-
             var tblAccountings = from s in db.Accountings
-                              .Where (t => t.Id == id)
-                              select s;
+                              .Where(t => t.Id == id)
+                                 select s;
 
-            return View(tblAccountings);
+            //Creates a new object as defined in ViewModel folder. 
+            //It is used to display the data in the Receipt View.
+            var receipt = new AccountingsReceipt
+            {
+                Id = (from a in tblAccountings select a.Id).First(),
+                StartCash = (from a in tblAccountings select a.StartCash).First(),
+                EndCash = (from a in tblAccountings select a.EndCash).First(),
+                CardCash = (from a in tblAccountings select a.CardCash).First(),
+                Timestamp = (from a in tblAccountings select a.Timestamp).First(),
+                LockStatus = (from a in tblAccountings select a.LockStatus).First(),
+                StartProduct = ProductStringToList((from a in tblAccountings select a.StartProduct).First()),
+                EndProduct = ProductStringToList((from a in tblAccountings select a.EndProduct).First())
+            };
+            return View(receipt);
         }
 
+<<<<<<< HEAD
+=======
+        //When the button in the Index View is pressed, the LockStatus is either set to true or false
+        //Depending on its' current value. When the value is set to true, EndProduct in Accounting
+        //table is filled with the items currently in tblProducts (inventory).
+>>>>>>> refs/remotes/origin/master
         public ActionResult Lock(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Accounting accounting = db.Accountings.Find(id);
+            var accounting = db.Accountings.Find(id);
             if (accounting == null)
             {
                 return HttpNotFound();
             }
-            return View(accounting);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Lock([Bind(Include = "LockStatus")] Accounting accounting)
-        {
-            if (ModelState.IsValid)
+            if (accounting.LockStatus)
             {
-                db.Entry(accounting).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                accounting.LockStatus = false;
             }
+<<<<<<< HEAD
             return View(accounting);
         }
 
@@ -176,3 +193,46 @@ namespace Cafeen.Controllers
         //    }
         //}
 
+=======
+            else
+            {
+                accounting.LockStatus = true;
+                accounting.EndProduct = ProductToStringParser(); 
+            }
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        //Returns all the products in tblProduct table as a string on the
+        //form: id:name:cat:qty:price;id:name:cat:qty:price; ... ;
+        public string ProductToStringParser()
+        {
+            var tblProducts = from s in db2.tblProducts.Include(t => t.tblCategory)
+                              select s;
+            var productString = string.Empty;
+
+            foreach (var item in tblProducts)
+            {
+                productString = productString +
+                    string.Join(":", item.Id.ToString(), item.Name, item.tblCategory.CategoryName, item.Qty.ToString(), item.tblCategory.Price.ToString()) + ";";
+            }
+            return productString;
+        }
+
+        //Takes a string on the form: form: id:name:cat:qty:price;id:name:cat:qty:price; ... ;
+        //And converts it to a list of Product Objects (See Product in  ViewModels folder).
+        public static List<Product> ProductStringToList(string productString)
+        {
+            List<Product> productList = new List<Product>();
+            productString = productString.Remove(productString.Length - 1);
+            var ps = productString.Split(';');
+            foreach (var item in ps)
+            {
+                var ps1 = item.Split(':');
+                productList.Add(new Product { Id = Int32.Parse(ps1[0]), Name = ps1[1], Category = ps1[2], Qty = Int32.Parse(ps1[3]), Price = Decimal.Parse(ps1[4]) });
+            }
+            return productList;
+        }
+    }
+}
+>>>>>>> refs/remotes/origin/master
