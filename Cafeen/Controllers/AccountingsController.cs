@@ -157,7 +157,6 @@ namespace Cafeen.Controllers
         //When the button in the Index View is pressed, the LockStatus is either set to true or false
         //Depending on its' current value. When the value is set to true, EndProduct in Accounting
         //table is filled with the items currently in tblProducts (inventory).
-
         public ActionResult Lock(int? id)
         {
             if (id == null)
@@ -173,35 +172,17 @@ namespace Cafeen.Controllers
             {
                 accounting.LockStatus = false;
             }
-
-            return View(accounting);
+            else
+            {
+                accounting.LockStatus = true;
+                accounting.EndProduct = ProductToStringParser(); 
+            }
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         //Returns all the products in tblProduct table as a string on the
-        //form: id,name,cat,qty,price;id,name,cat,qty,price; ...
-//        public string ProductToStringParser(int id)
-//        {
-//            var tblProducts = from s in db2.tblProducts.Include(t => t.tblCategory)
-//                              select s;
-//            string productString = "";
-//            foreach (var item in tblProducts)
-//            {
-//                productString = productString +
-//                    string.Join(",", item.Id.ToString(), item.Name, item.tblCategory.CategoryName, item.Qty.ToString(), item.tblCategory.Price.ToString()) + ";"
-//            }
-//           }
-
-//            else
-//            {
-//                accounting.LockStatus = true;
-//                accounting.EndProduct = ProductToStringParser();
-//    }
-//            db.SaveChanges();
-//            return RedirectToAction("Index");
-//}
-
-//Returns all the products in tblProduct table as a string on the
-//form: id:name:cat:qty:price;id:name:cat:qty:price; ... ;
+        //form: id:name:cat:qty:price;id:name:cat:qty:price; ... ;
         public string ProductToStringParser()
         {
             var tblProducts = from s in db2.tblProducts.Include(t => t.tblCategory)
