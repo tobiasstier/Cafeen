@@ -14,6 +14,8 @@ namespace Cafeen.Controllers
 {
     public class AccountingsController : Controller
     {
+        
+
         private DatabaseContext db = new DatabaseContext();
         private ProductContext db2 = new ProductContext();
 

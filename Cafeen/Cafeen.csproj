@@ -164,6 +164,7 @@
     <Compile Include="Controllers\AccountingsController.cs" />
     <Compile Include="Controllers\HistoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\tblCategoriesController.cs" />
     <Compile Include="Controllers\tblProductsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -213,6 +214,7 @@
     <Content Include="Views\Histories\Details.cshtml" />
     <Content Include="Views\Histories\Edit.cshtml" />
     <Content Include="Views\Histories\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
