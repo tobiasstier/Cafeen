@@ -61,9 +61,27 @@
             @Html.DisplayFor(modelItem => item.tblCategory.Price)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+
+            @Html.ActionLink(
+                linkText: "Edit",
+                actionName: "Edit",
+                routeValues: new { id = item.Id },
+                htmlAttributes: new { @class = "btn btn-info btn-sm" }
+            )
+
+            @Html.ActionLink(
+                linkText: "Details",
+                actionName: "Details",
+                routeValues: new { id = item.Id },
+                htmlAttributes: new { @class = "btn btn-info btn-sm" }
+            )
+
+            @Html.ActionLink(
+                linkText: "Delete",
+                actionName: "Delete",
+                routeValues: new { id = item.Id },
+                htmlAttributes: new { @class = "btn btn-info btn-sm" }
+            )
         </td>
     </tr>
 }
