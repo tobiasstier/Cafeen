@@ -162,7 +162,6 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountingsController.cs" />
-    <Compile Include="Controllers\HistoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\tblCategoriesController.cs" />
@@ -208,12 +207,6 @@
     <Content Include="Views\tblProducts\Edit.cshtml" />
     <Content Include="Views\tblProducts\Index.cshtml" />
     <Content Include="Views\Accountings\Receipt.cshtml" />
-    <Content Include="Views\Accountings\Lock.cshtml" />
-    <Content Include="Views\Histories\Create.cshtml" />
-    <Content Include="Views\Histories\Delete.cshtml" />
-    <Content Include="Views\Histories\Details.cshtml" />
-    <Content Include="Views\Histories\Edit.cshtml" />
-    <Content Include="Views\Histories\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -224,7 +217,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\History\" />
     <Folder Include="Views\Management\" />
   </ItemGroup>
   <PropertyGroup>

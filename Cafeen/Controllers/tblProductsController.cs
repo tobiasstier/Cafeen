@@ -72,9 +72,18 @@ namespace Cafeen.Controllers
                     break;
             }
 
-            int pageSize = itemPrPage;
-            int pageNumber = (page ?? 1);
-            return View(tblProducts.ToPagedList(pageNumber, pageSize));
+            if (itemPrPage > 0)
+            {
+                int pageSize = itemPrPage;
+                int pageNumber = (page ?? 1);
+                return View(tblProducts.ToPagedList(pageNumber, pageSize));
+            }
+            else
+            {
+                return View(tblProducts.ToPagedList(1, 5));
+            }
+           
+
         }
 
         // GET: tblProducts/Details/5
