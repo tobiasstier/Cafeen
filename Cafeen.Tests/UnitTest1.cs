@@ -9,7 +9,7 @@ namespace Cafeen.Tests
         [TestMethod]
         public void TestMethod1()
         {
-
+           
         }
     }
 }

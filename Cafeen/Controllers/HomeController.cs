@@ -11,10 +11,6 @@ namespace Cafeen.Controllers
     {
         public ActionResult Index()
         {
-            //if (Session["valid"] == "valid")
-            //{
-
-            //}
 
             return View();
         }
