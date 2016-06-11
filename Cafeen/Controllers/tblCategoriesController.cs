@@ -111,8 +111,13 @@ namespace Cafeen.Controllers
         {
             tblCategory tblCategory = db.tblCategories.Find(id);
             db.tblCategories.Remove(tblCategory);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            if (db.tblProducts.Where(x => x.CategoryId == id).ToList().Count() == 0)
+            {
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            ViewBag.Bob = true;
+            return View(tblCategory);
         }
 
         protected override void Dispose(bool disposing)
