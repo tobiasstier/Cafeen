@@ -8,26 +8,26 @@
 
 <h2>@ViewBag.Title</h2>
 
-<p style="font-size:18px;">
-    @Html.ActionLink("Create a new product", "Create", FormMethod.Get)
-</p>
+@Html.ActionLink(
+    linkText: "Create new product",
+    actionName: "Create",
+    routeValues: null, // or to pass some value -> routeValues: new { id = 1 },
+    htmlAttributes: new { @class = "btn btn-primary btn-large" }
+)
+
+<br />
+<br />
+
 @using (Html.BeginForm())
 
 {
     <p>
-        Find by name: @Html.TextBox("searchString")
+        Search for entry: @Html.TextBox("searchString")
         <input type="submit" value="Search" />
     </p>
 }
 
-@using (Html.BeginForm())
 
-{
-    <p>
-        Items Pr. Page: @Html.TextBox("itemPrPage")
-        <input type="submit" value="Go" />
-    </p>
-}
 
 <table class="table">
     <tr>
@@ -70,8 +70,22 @@
 
 </table>
 
-<br />
-Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+
+
+
+
+
+@using (Html.BeginForm())
+
+{
+    <p>
+        Items pr. Page: @Html.TextBox("itemPrPage")
+        <input type="submit" value="Go" />
+    </p>
+}
 
 @Html.PagedListPager(Model, page => Url.Action("Index",
     new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter, itemPrPage = ViewBag.CurrentPage }))
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
