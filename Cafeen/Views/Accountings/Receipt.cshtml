@@ -24,7 +24,12 @@
         <th>
             @Html.DisplayNameFor(model => model.LockStatus)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
     </tr>
     <tr>
         <td>
@@ -41,6 +46,12 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => Model.LockStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Title)
         </td>
     </tr>
 

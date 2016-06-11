@@ -6,7 +6,7 @@
 
 <h2>Accounting</h2>
 
-<p style="font-size:18px;"> @Html.ActionLink("Start a new day", "Create") </p>
+<p style="font-size:18px;"> @Html.ActionLink("Start a new session", "Create") </p>
 
 
 <table class="table">
@@ -16,6 +16,12 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Timestamp)
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Title
         </th>
         <th>
             Lock status
@@ -41,6 +47,14 @@
             <td>
 
                 @Html.DisplayFor(modelItem => item.Timestamp)
+            </td>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
                 @if (item.LockStatus == true)
