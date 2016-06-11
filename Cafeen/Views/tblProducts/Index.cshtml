@@ -3,13 +3,13 @@
 <link href="=~/Content/PagesList.css" rel="stylesheet" type="text/css"/>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Inventory";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create", FormMethod.Get)
+<p style="font-size:18px;">
+    @Html.ActionLink("Create a new product", "Create", FormMethod.Get)
 </p>
 @using (Html.BeginForm())
 
