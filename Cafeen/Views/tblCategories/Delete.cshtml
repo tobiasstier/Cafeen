@@ -8,7 +8,6 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>tblCategory</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -29,12 +28,19 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")
+            @if (ViewBag.Bob == true)
+            {
+                <p style="color:red">You cannot delete the category while products are still using it.</p>
+                <p style="color:red">Either Delete them or Edit the category in inventory</p>
+            }
         </div>
     }
 </div>
+
