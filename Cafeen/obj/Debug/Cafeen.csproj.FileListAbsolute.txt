@@ -154,6 +154,5 @@ C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.Deploymen
 C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Webpages.Razor.xml
 C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Helpers.xml
 C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Mvc.xml
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.csprojResolveAssemblyReference.cache
 C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.dll
 C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.pdb
