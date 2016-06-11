@@ -145,6 +145,7 @@
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="ClassDiagram2.cd" />
     <None Include="scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -155,15 +156,11 @@
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Home\Inventory.cshtml" />
-    <Content Include="Views\Home\History.cshtml" />
-    <Content Include="Views\Home\Accountings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\tblCategoriesController.cs" />
     <Compile Include="Controllers\tblProductsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -171,7 +168,6 @@
     </Compile>
     <Compile Include="Models\Accounting.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
-    <Compile Include="Models\History.cs" />
     <Compile Include="Models\ProductContext.cs" />
     <Compile Include="Models\tblCategory.cs" />
     <Compile Include="Models\tblProduct.cs" />
@@ -207,7 +203,6 @@
     <Content Include="Views\tblProducts\Edit.cshtml" />
     <Content Include="Views\tblProducts\Index.cshtml" />
     <Content Include="Views\Accountings\Receipt.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -217,7 +212,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Management\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
