@@ -45,16 +45,15 @@
         
     </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
 
-
+<div>
     @Html.ActionLink(
                 linkText: "Delete",
                 actionName: "Delete",
                 routeValues: null,
                 htmlAttributes: new { @class = "btn btn-danger btn-md" }
                 )
+
 
     @Html.ActionLink(
                 linkText: "Go back",
@@ -63,5 +62,6 @@
                 htmlAttributes: new { @class = "btn btn-success btn-md" }
                 )
 
-    }
+
+
 </div>

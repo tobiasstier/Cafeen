@@ -40,6 +40,12 @@
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
+
+    @Html.ActionLink(
+                linkText: "Go back",
+                actionName: "Index",
+                routeValues: null,
+                htmlAttributes: new { @class = "btn btn-success btn-md" }
+                )
+
