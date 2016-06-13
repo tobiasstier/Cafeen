@@ -3,31 +3,31 @@
 <link href="=~/Content/PagesList.css" rel="stylesheet" type="text/css"/>
 
 @{
-    ViewBag.Title = "Inventory";
+    ViewBag.Title = "Index";
 }
 
-<h2>@ViewBag.Title</h2>
+<h2>Index</h2>
 
-@Html.ActionLink(
-    linkText: "Create new product",
-    actionName: "Create",
-    routeValues: null, // or to pass some value -> routeValues: new { id = 1 },
-    htmlAttributes: new { @class = "btn btn-primary btn-large" }
-)
+<p>
+    @Html.ActionLink("Create New", "Create", FormMethod.Get)
+</p>
+@using (Html.BeginForm())
 
-<br />
-<br />
+{
+    <p>
+        Find by name: @Html.TextBox("searchString")
+        <input type="submit" value="Search" />
+    </p>
+}
 
 @using (Html.BeginForm())
 
 {
     <p>
-        Search for entry: @Html.TextBox("searchString")
-        <input type="submit" value="Search" />
+        Items Pr. Page: @Html.TextBox("itemPrPage")
+        <input type="submit" value="Go" />
     </p>
 }
-
-
 
 <table class="table">
     <tr>
@@ -61,49 +61,17 @@
             @Html.DisplayFor(modelItem => item.tblCategory.Price)
         </td>
         <td>
-
-            @Html.ActionLink(
-                linkText: "Edit",
-                actionName: "Edit",
-                routeValues: new { id = item.Id },
-                htmlAttributes: new { @class = "btn btn-info btn-sm" }
-            )
-
-            @Html.ActionLink(
-                linkText: "Details",
-                actionName: "Details",
-                routeValues: new { id = item.Id },
-                htmlAttributes: new { @class = "btn btn-info btn-sm" }
-            )
-
-            @Html.ActionLink(
-                linkText: "Delete",
-                actionName: "Delete",
-                routeValues: new { id = item.Id },
-                htmlAttributes: new { @class = "btn btn-info btn-sm" }
-            )
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }
 
 </table>
 
-
-
-
-
-
-
-@using (Html.BeginForm())
-
-{
-    <p>
-        Items pr. Page: @Html.TextBox("itemPrPage")
-        <input type="submit" value="Go" />
-    </p>
-}
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
 @Html.PagedListPager(Model, page => Url.Action("Index",
     new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter, itemPrPage = ViewBag.CurrentPage }))
-
-Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount

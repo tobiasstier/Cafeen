@@ -156,4 +156,3 @@ C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Helpers.xml
 C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\bin\System.Web.Mvc.xml
 C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.dll
 C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.pdb
-C:\Users\Tobias\Documents\GitHub\Cafeen\Cafeen\obj\Debug\Cafeen.csprojResolveAssemblyReference.cache
