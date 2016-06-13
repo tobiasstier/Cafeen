@@ -15,5 +15,7 @@ namespace Cafeen.ViewModels
         public Boolean LockStatus { get; set; }
         public List<Product> StartProduct { get; set; }
         public List<Product> EndProduct { get; set; }
+        public string Description { get; set; }
+        public string Title { get; set; }
     }
 }

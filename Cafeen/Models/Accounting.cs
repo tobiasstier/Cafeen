@@ -17,5 +17,7 @@ namespace Cafeen.Models
         public Boolean LockStatus { get; set; }
         public string StartProduct { get; set; }
         public string EndProduct { get; set; }
+        public string Description { get; set; }
+        public string Title { get; set; }
     }
 }
