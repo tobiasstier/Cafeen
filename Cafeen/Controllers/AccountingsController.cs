@@ -51,7 +51,7 @@ namespace Cafeen.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,StartCash,EndCash,CardCash,Timestamp")] Accounting accounting)
+        public ActionResult Create([Bind(Include = "Id,StartCash,EndCash,CardCash,Timestamp,Description,Title")] Accounting accounting)
         {
             if (ModelState.IsValid)
             {
@@ -81,15 +81,15 @@ namespace Cafeen.Controllers
         }
 
         // POST: Accountings/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,StartCash,EndCash,CardCash,Timestamp")] Accounting accounting)
+        public ActionResult Edit([Bind(Include = "Id,StartCash,EndCash,CardCash,StartProduct,EndProduct,Timestamp,Description,Title")] Accounting accounting)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(accounting).State = EntityState.Modified;
+                accounting.StartProduct = ProductToStringParser();
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -151,7 +151,9 @@ namespace Cafeen.Controllers
                 Timestamp = (from a in tblAccountings select a.Timestamp).First(),
                 LockStatus = (from a in tblAccountings select a.LockStatus).First(),
                 StartProduct = ProductStringToList((from a in tblAccountings select a.StartProduct).First()),
-                EndProduct = ProductStringToList((from a in tblAccountings select a.EndProduct).First())
+                EndProduct = ProductStringToList((from a in tblAccountings select a.EndProduct).First()),
+                Description = (from a in tblAccountings select a.Description).First(),
+                Title = (from a in tblAccountings select a.Title).First()
             };
             return View(receipt);
         }

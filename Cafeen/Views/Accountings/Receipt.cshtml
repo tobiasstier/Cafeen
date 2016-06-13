@@ -19,7 +19,13 @@
             @Html.DisplayNameFor(model => model.CardCash)
         </th>
         <th>
-            <b>Day Started</b>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            <b>Session Started</b>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.LockStatus)
@@ -35,6 +41,12 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => Model.CardCash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Title)
         </td>
         <td>
             @Html.DisplayFor(modelItem => Model.Timestamp)
