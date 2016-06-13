@@ -66,7 +66,7 @@ namespace Cafeen.Controllers
         }
 
         // GET: Accountings/Edit/5
-        public ActionResult Edit(int? id=null)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
