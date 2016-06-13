@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Cafeen.Controllers;
 using System.Web.Mvc;
+using Cafeen.Models;
 
 namespace Cafeentest.Controllers
 {
@@ -28,32 +29,6 @@ namespace Cafeentest.Controllers
         }
 
 
-        //[TestMethod]
-        //public void TestLock()
-        //{
-        //    var controller = new AccountingsController();
-        //    var Accounting = new Accounting();
-        //    var result = controller.Lock(1) as 
-        //}
-
-
-
-        //[TestMethod]
-        //public void testEditAccounting()
-        //{
-        //    var controller = new AccountingsController();
-        //    var accounting = new Accounting();
-        //    var Id = 4;
-        //    var StartCash = 1000;
-        //    var EndCash = 500;
-        //    var CardCash = 2500;
-        //    var TimeStamp = System.DateTime.Now;
-        //    var LockStatus = false;
-        //    var StartProduct = "bob";
-        //    var EndProduct = "bobelina";
-        //    var result = (RedirectToRouteResult) controller.Edit(accounting);
-        //    Assert.AreEqual("Index", result.Values["action"]);
-        //}
     }
 }
 
