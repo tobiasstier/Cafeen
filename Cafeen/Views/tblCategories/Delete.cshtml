@@ -8,7 +8,6 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>tblCategory</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -29,12 +28,18 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+    @Html.ActionLink(
+                linkText: "Delete",
+                actionName: "Delete",
+                routeValues: null,
+                htmlAttributes: new { @class = "btn btn-danger btn-md" }
+                )
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
+    @Html.ActionLink(
+                linkText: "Go back",
+                actionName: "Index",
+                routeValues: null,
+                htmlAttributes: new { @class = "btn btn-success btn-md" }
+                )
 </div>
+

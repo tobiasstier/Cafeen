@@ -14,6 +14,8 @@ namespace Cafeen.Controllers
 {
     public class AccountingsController : Controller
     {
+        
+
         private DatabaseContext db = new DatabaseContext();
         private ProductContext db2 = new ProductContext();
 
@@ -64,7 +66,7 @@ namespace Cafeen.Controllers
         }
 
         // GET: Accountings/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int? id=null)
         {
             if (id == null)
             {

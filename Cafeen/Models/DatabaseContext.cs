@@ -9,7 +9,6 @@ namespace Cafeen.Models
 {
     public class DatabaseContext : DbContext
     {
-        public DbSet<History> Histories { get; set; }
         public DbSet<Accounting> Accountings { get; set; }
     }
 }
